@@ -1,6 +1,6 @@
 ╔════════════════════════════════════════════════════════════════════╗
-║              SCENARIO REPORT FILE              ║  Web Application  ║
-║																              	 ║  Vulnerabilities  ║
+║              SCENARIO REPORT FILE            ║  Web Application    ║
+║																             	 ║  Vulnerabilities    ║
 ╠════════════════════════════════════════════════════════════════════╣
 ║ Scenario Number : 07                                               
 ║ Scenario Name   : Dashboard / API Hijack                           
