@@ -1,6 +1,6 @@
 
 ╔════════════════════════════════════════════════════════════════════╗
-║                       SCENARIO REPORT FILE                         ║  OTHER SCENARIOS  ║
+║          SCENARIO REPORT FILE                  ║  OTHER SCENARIOS  ║
 ╠════════════════════════════════════════════════════════════════════╣
 ║ Scenario Number : 12                                               
 ║ Scenario Name   : Replay Attack                                    
