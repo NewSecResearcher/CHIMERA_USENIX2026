@@ -1,2 +1,7 @@
-# CHIMERA_USENIX2026
+Submission Number - 901   [USENIX 2026 (Cycle 1)]
 
+SoK: Systematizing Security Vulnerabilities and Testing Tools for ROS-Based Robotic Systems
+
+Abstract - Robots are rapidly adopted in areas like manufacturing, transport, and defense, yet they harbor critical security risks such as exposed ROS services, insecure default credentials, and injection attacks that expand the attack surface. While real-world incidents have demonstrated how attackers can hijack motion controllers or spoof sensors like LiDAR, additional weaknesses surge from ROS, further amplifying these threats. To capture the landscape, we reviewed over 50 research papers, classifying ROS vulnerabilities and cataloguing open-source security tools relevant to robotics. Our survey revealed fragmented coverage as these tools often focus on narrow aspects and rarely detect exploits that propagate across multiple layers of the stack. Moreover, many tools operate in isolation, leaving complex threats such as sensor spoofing, which cut across hardware, middleware, and application layers, insufficiently addressed. Rather than creating new tools, we propose CHIMERA (Chained Instrumentation for Multi-Layer Evaluation of Robotic Attacks), a methodology that systematically links and orchestrates existing open-source tools into unified pipelines replicating real-world attack progressions. We demonstrate over a dozen attack scenarios where CHIMERA enables structured and reproducible robotic security assessments, helping developers harden resilience and reinforcing the urgency of secure-by-design practices in robotics.
+
+Keywords— robot security, ROS2, SoK, vulnerability taxonomy, toolchain, security assessment, ROS.
