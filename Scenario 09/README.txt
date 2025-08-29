@@ -1,5 +1,5 @@
 ╔════════════════════════════════════════════════════════════════════╗
-║            SCENARIO REPORT FILE               ║Configuration Issues║
+║                       SCENARIO REPORT FILE                        ║Configuration Issues║
 ╠════════════════════════════════════════════════════════════════════╣
 ║ Scenario Number : 09                                               
 ║ Scenario Name   : Default Credentials                              

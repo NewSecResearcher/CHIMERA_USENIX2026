@@ -1,8 +1,9 @@
+
 ╔════════════════════════════════════════════════════════════════════╗
-║         SCENARIO REPORT FILE          ║  Web Application Vuln.     ║
+║                       SCENARIO REPORT FILE                         ║  OTHER SCENARIOS  ║
 ╠════════════════════════════════════════════════════════════════════╣
-║ Scenario Number : 07                                               
-║ Scenario Name   : Dashboard / API Hijack                           
+║ Scenario Number : 10                                            
+║ Scenario Name   : Replay Attack                                    
 ╚════════════════════════════════════════════════════════════════════╝
 
 
@@ -17,48 +18,45 @@
 
 [ TOOLS REQUIRED ]
 ─────────────────────────────────────────────────────────────────────
-→ Nmap / Zenmap   	  :: Network reconnaissance & web port discovery  
-→ OWASP ZAP / BurpSuite   :: Automated web vulnerability scanning (auth, injection, session flaws)  
-→ MITMproxy        	  :: Live interception and manipulation of API traffic  
+→ Nmap / Zenmap      :: Network reconnaissance & service discovery  
+→ rosbag             :: Recording & replaying ROS messages  
+→ Wireshark          :: Packet sniffing & protocol analysis  
 
 
 [ ATTACK EXPLANATION ]
 ─────────────────────────────────────────────────────────────────────
-The attack begins with **reconnaissance**: Nmap/Zenmap scans the network 
-to discover open web ports, dashboard endpoints, and API services exposed 
-by the robot.  
+The adversary begins by capturing live ROS network traffic. This can be 
+achieved using Wireshark, tcpdump, or directly with rosbag to record 
+legitimate control commands and sensor data exchanged between nodes.  
 
-Once the footprint is mapped, **automated scanners** (OWASP ZAP, BurpSuite) 
-are used to test the dashboards and APIs. These tools look for issues like:  
-  • Authentication bypass  
-  • Injection points  
-  • Weak or missing session management  
+The recorded data is saved into a rosbag file and later **replayed** back 
+into the ROS network. Because ROS lacks cryptographic timestamps or 
+sequence validation, the robot interprets these stale commands as fresh, 
+resulting in unintended actions.  
 
-After identifying weaknesses, attackers escalate by using **MITMproxy or BurpSuite** 
-to intercept live API traffic, modify requests/responses, and hijack 
-control of the dashboard.  
-
-Exploitation mapping:  
-  • TS2 → Compromised API calls directly control ROS nodes.  
-  • TS3 → Hijacked dashboard sends malicious ROS messages.  
-  • TS5 → Exploitation of the robot’s web interface/dashboard layer.  
+Key exploitation points:
+  • TS2 → Nodes accept old but valid messages.  
+  • TS3 → Replayed data injected into ROS topics.  
+  • TS7 → Forensic timing analysis can reveal duplicates.  
 
 
 [ POSSIBLE REAL-LIFE SCENARIOS ]
 ─────────────────────────────────────────────────────────────────────
-✦ Unauthorized user hijacking a robot’s web dashboard to override operator commands.  
-✦ Industrial APIs exploited to inject malicious job requests, halting production.  
-✦ Remote attacker modifying telemetry APIs to feed false data to operators.  
-✦ Delivery, patrol compromised through OTA vulnerabilities via exposed dashboards.  
+✦ Delivery Robot → Replaying past “go to location” commands, sending it 
+  back to completed tasks.  
+✦ Drone Systems → Replaying “land” or “takeoff” instructions mid-flight, 
+  creating safety hazards.  
+✦ Industrial Robots → Triggering outdated assembly actions, causing 
+  operational disruption or safety risks.  
 
 
 [ REFERENCES ]
 ─────────────────────────────────────────────────────────────────────
-1. OWASP API Security Top 10 — https://owasp.org/API-Security/  
-2. MITMproxy Documentation — https://mitmproxy.org/  
-3. BurpSuite User Guide — https://portswigger.net/burp/documentation  
-4. Research on robot dashboard vulnerabilities: IEEE/ACM security papers.  
+1. CVE-2021-38425: Replay attack vulnerability in ROS2 middleware.  
+2. Alias Robotics: Security assessments on ROS replay threats.  
+3. Wireshark Documentation — https://www.wireshark.org/docs/  
+4. ROS2 rosbag Tutorials — https://docs.ros.org/en/humble/Tutorials/  
 
 ─────────────────────────────────────────────────────────────────────
-                 END OF SCENARIO REPORT — #07
+                 END OF SCENARIO REPORT — #12
 ─────────────────────────────────────────────────────────────────────
