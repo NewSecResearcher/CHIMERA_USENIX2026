@@ -1,6 +1,8 @@
 -------------------------------------------------------------------------------------------------------------------------
 
+
 **Scenario Metadata**
+
 
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -10,12 +12,13 @@
 
 -------------------------------------------------------------------------------------------------------------------------
 
+
 **Attack Walkthrough**
+
 
 -------------------------------------------------------------------------------------------------------------------------
 
 1️⃣ Reconnaissance (🔎 Nmap / Zenmap)
-
 
 
 	🎯 Objective: Discover IP addresses, live hosts, open HTTP(S) ports, and exposed services.
@@ -29,7 +32,6 @@
 2️⃣ Vulnerability Scanning (🕷 ZAP / BurpSuite)
 
 
-
 	🎯 Objective: Assess the web dashboard and API for weaknesses.
 
 	⚙️ Execution: Automated scan uncovers:
@@ -38,8 +40,6 @@
 		- Injection flaws (SQLi, command injection, etc.)
 		- Poor session management, etc.
 
-
-
 	📊 Outcome: Parameters and API endpoints susceptible to manipulation are mapped.
 
 	🎥 Evidence: scenario 6.mp4 → demonstrates dashboard scanning in action.
@@ -47,7 +47,6 @@
 
 
 3️⃣ Exploitation (⚡ MITMproxy / BurpSuite Intercept)
-
 
 
 	🎯 Objective: Actively manipulate dashboard → API communication.
