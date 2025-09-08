@@ -24,14 +24,14 @@
 
 
 
-1️⃣ Reconnaissance (🔎 Nmap)
+1️⃣ Reconnaissance (🔎 Nmap) - as shown in Nmap_Host_Discovery.png
 
 
 	🎯 Objective: Enumerate active TF nodes and topics within the ROS2 environment.
 
 
 
-2️⃣ Traffic Monitoring (🌐 DDS Spy)  - as shown in DDS\_Spy\_Tool.png and DDS\_Spy\_Information Gathering.png
+2️⃣ Traffic Monitoring (🌐 DDS Spy)  - as shown in DDS_Spy_Tool.png and DDS_Spy_Information Gathering.png
 
 
 	🎯 Objective: Deploy \*\*DDS Spy\*\* passively to monitor messages, detect unusual or malformed data, and gather context for 	  		      injection.
