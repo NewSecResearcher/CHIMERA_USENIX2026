@@ -50,24 +50,23 @@
 	🔧 Execution: Use \*\*ros2\_fuzz\*\* to actively send malformed TF messages, probing for weaknesses in frame handling and input 		      validation.
 
 
-
 4️⃣ Visualization \& Impact Assessment (🖥️ RViz)
 
 
- 	🎯 Objective: Detect operational impact on robot localization and frame transforms.
+	🎯 Objective: Detect operational impact on robot localization and frame transforms.
 
 
- 	🔧 Execution: Visualize TF tree and robot pose in \*\*RViz\*\* to see misalignments or disruptions caused by injected messages.
-
+	🔧 Execution: Visualize TF tree and robot pose in \*\*RViz\*\* to see misalignments or disruptions caused by injected messages.
 
 
 5️⃣ Recording \& Forensic Analysis (📦 rosbag)
 
 
- 	🎯 Objective: Record injected traffic for replay and post-analysis.
+	🎯 Objective: Record injected traffic for replay and post-analysis.
 
 
- 	🔧 Execution: Use \*\*rosbag\*\* to capture the injection session for replay, validation, and further investigation of 		   		      vulnerabilities.
+	🔧 Execution: Use \*\*rosbag\*\* to capture the injection session for replay, validation, and further investigation of 		   		      vulnerabilities.
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
