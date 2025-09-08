@@ -1,5 +1,5 @@
 ╔════════════════════════════════════════════════════════════════════╗
-║                       SCENARIO REPORT FILE                         ║ Injection Attacks ║
+║           SCENARIO REPORT FILE                 ║ Injection Attacks ║
 ╠════════════════════════════════════════════════════════════════════╣
 ║ Scenario Number : 02                                               
 ║ Scenario Name   : TF Injection Detection                           
