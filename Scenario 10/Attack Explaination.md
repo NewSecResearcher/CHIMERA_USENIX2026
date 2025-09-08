@@ -13,11 +13,10 @@
 
 -------------------------------------------------------------------------------------------------------------------------
 
-1️⃣ Reconnaissance (🔎 Nmap)
+1️⃣ Reconnaissance (🔎 Nmap) - as shown in Nmap_Port_Discovery.png
 
 
-	🎯 Objective: Perform network reconnaissance to identify live hosts, services, and exposed ROS communication endpoints. 		              (`Nmap_Port_Discovery.png`).
-
+	🎯 Objective: Perform network reconnaissance to identify live hosts, services, and exposed ROS communication endpoints. 		             
 
 
 
