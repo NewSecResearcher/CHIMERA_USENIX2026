@@ -41,7 +41,7 @@
 
 
 
-3️⃣ Injection (💉 ros2\_fuzz)
+3️⃣ Injection (💉 ros2\_fuzz or using a custom script)
 
 
 	🎯 Objective: Inject malformed or boundary-case TF messages to test system validation and response.
