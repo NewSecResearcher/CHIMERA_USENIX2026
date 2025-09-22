@@ -26,6 +26,8 @@ In this scenario, the adversary performs a traffic interception and encryption v
 
 To verify and mitigate this exposure, SROS2 (ROS2 Security) is enabled to ensure encrypted and authenticated communication across ROS2 nodes. The communication is then validated by using ros2 doctor, which checks for encryption status and verifies the configuration of the ROS2 security settings.
 
+While it is a simple test scenario, to simplify, we captured the packets while in SROS2 was enabled/disabled on the victim machine but can be also captured through the attacker machine.
+
 Key points in the process:
 • TS2 → Captured ROS2 DDS traffic in plaintext.
 • TS3 → SROS2 enabled for encryption and authentication of communication.
