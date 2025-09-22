@@ -1,0 +1,34 @@
+# Example code demonstrating TF injection. Can be adapted to a custom ROS2 setup as needed.
+
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Twist
+import math
+
+class CmdVelAttack(Node):
+    def __init__(self):
+        super().__init__('cmd_vel_attack')
+        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.timer = self.create_timer(0.1, self.publish_velocity)
+        self.angle = 0.0
+
+    def publish_velocity(self):
+        msg = Twist()
+        # Move in a circle
+        msg.linear.x = 0.2
+        msg.angular.z = 0.5 * math.sin(self.angle)
+        self.publisher_.publish(msg)
+        self.angle += 0.1
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = CmdVelAttack()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == "__main__":
