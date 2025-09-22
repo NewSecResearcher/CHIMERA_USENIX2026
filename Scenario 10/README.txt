@@ -30,9 +30,9 @@ achieved using Wireshark, tcpdump, or directly with rosbag to record
 legitimate control commands and sensor data exchanged between nodes.  
 
 The recorded data is saved into a rosbag file and later **replayed** back 
-into the ROS network. Because ROS lacks cryptographic timestamps or 
-sequence validation, the robot interprets these stale commands as fresh, 
-resulting in unintended actions.  
+into the ROS network as shown in Scenario10.mkv. Because ROS lacks 
+cryptographic timestamps or sequence validation, the robot interprets 
+these stale commands as fresh, resulting in unintended actions.  
 
 Key exploitation points:
   • TS2 → Nodes accept old but valid messages.  
