@@ -17,11 +17,11 @@
 
 [ TOOLS REQUIRED ]
 ─────────────────────────────────────────────────────────────────────
-→ Aztarna                      :: Reconnaissance of ROS/DDS endpoints and TF topics  
-→ DDS Spy                      :: Passive traffic monitoring for topic/message patterns  
-→ ros2_fuzz/custom script      :: Injection of malformed or boundary TF messages  
-→ RViz                         :: Visualization to detect disruptions in localization/frames  
-→ rosbag                       :: Recording and replaying traffic for forensic validation  
+→ Aztarna        :: Reconnaissance of ROS/DDS endpoints and TF topics  
+→ DDS Spy        :: Passive traffic monitoring for topic/message patterns  
+→ ros2_fuzz      :: Injection of malformed or boundary TF messages  
+→ RViz           :: Visualization to detect disruptions in localization/frames  
+→ rosbag         :: Recording and replaying traffic for forensic validation  
 
 
 [ ATTACK EXPLANATION ]
@@ -31,8 +31,8 @@ enumerate active TF nodes and topics within the ROS2 environment. Once
 topics are mapped, **DDS Spy** is deployed for passive monitoring to observe 
 traffic patterns and identify abnormalities in TF broadcasts.  
 
-Next, **ros2_fuzz** or a custom script as shown in Scenario2.mp4 can be
-used to actively inject malformed or boundary case TF messages, 
+Next, **ros2_fuzz** or using a custom python script as shown in Scenario2.mkv
+can be used to actively injects malformed or boundary case TF messages, 
 probing the system’s ability to validate inputs and handle unexpected data. 
 During these injections, **RViz visualization** highlights any resulting 
 misalignments in robot localization or frame transforms, exposing the 
