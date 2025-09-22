@@ -31,7 +31,7 @@
 
 
 
-3️⃣ Replay Attack (🎬 rosbag play)
+3️⃣ Replay Attack (🎬 rosbag play) - as sjown in Scenario10.mp4
 
 
 	🎯 Objective: Replay previously recorded ROS traffic to trick the robot into executing stale commands.
